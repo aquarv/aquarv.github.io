@@ -9,19 +9,22 @@ extra:
       start: 0
       end: 4
       type: default
+      # type: vertical
+      # type: carousel
+      # type: overlay
     - section: articles
       size: 4
-      start: 4
-      end: 12
-      type: horizontal
-      title: blog
-  - - section: articles
-      size: 12 
       start: 0
       end: 12
-      type: vertical
+      type: horizontal
       title: articles
-      row: 4
+  # - - section: articles
+  #     size: 12 
+  #     start: 0
+  #     end: 12
+  #     type: vertical
+  #     title: articles
+  #     row: 4
   - - section: articles
       size: 6
       start: 10
