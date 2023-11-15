@@ -115,31 +115,34 @@ Items (object):
  - icon (string): One of 
  - url (string): href of the icon
 
-### utterances
+### beaudar.enabled
+ - type: boolean
+
+### beaudar.repo
  - type: string
  - default: "" 
 
-[utterances](https://github.com/utterance/utterances) repo url.
+[beaudar](https://github.com/beaudar/beaudar).reop repo url.
 
-Use an empty string to ignore utterances widget.
+Use an empty string to ignore beaudar widget.
 
-### utterances_label
+### beaudar.label
  - type: string
  - default: "Comments" 
 
-[utterances](https://github.com/utterance/utterances) widget label.
+[beaudar](https://github.com/beaudar/beaudar) widget label.
 
-### utterances_theme
+### beaudar.theme
  - type: string
  - default: "github-light" 
 
-[utterances](https://github.com/utterance/utterances) widget theme.
+[beaudar](https://github.com/beaudar/beaudar) widget theme.
 
-### utterances_issue_term
+### beaudar.issue_term
  - type: string
  - default: "pathname" 
 
-[utterances](https://github.com/utterance/utterances) widget pathname.
+[beaudar](https://github.com/beaudar/beaudar) widget pathname.
 
 ## Contributing
 Any help is greatly appreciated!

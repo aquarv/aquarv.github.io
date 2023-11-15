@@ -8,6 +8,7 @@ taxonomies:
     - yang
   tags:
     - rust
+    - notes
 ---
 
 > NOTE: 有的人可能开了 rustlings 的 lsp 功能，但是仍然没有智能提示/补全功能，这可能是因为 rust-analyzer 插件更新后和当前的 rustlings 不兼容导致的，可以将 rust-analyzer 插件的版本回退，暂时解决此问题：

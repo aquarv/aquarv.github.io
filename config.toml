@@ -1,4 +1,5 @@
 base_url = "https://creatio.top/"
+# base_url = "http://127.0.0.1:1111/"
 
 default_language = "en"
 compile_sass = true
@@ -14,8 +15,27 @@ taxonomies = [
 
 build_search_index = true
 
+[search] # Options specific to elasticlunr search.
+# index format can be: elasticlunr_json or elasticlunr_javascript
+index_format = "elasticlunr_json"
+include_title = true              # include title of page/section in index
+include_description = true        # include description of page/section in index
+include_content = true            # include rendered content of page/section in index
+# truncate_content_length = 100 # Truncate at nth character. May be useful if index is getting too large.
+
 [markdown]
+line_numbers = true
 highlight_code = true
+highlight_theme = "css"
+render_emoji = false
+external_links_target_blank = true # rel="noopener"
+external_links_no_follow = false   # rel="nofollow"
+external_links_no_referrer = false # rel="noreferrer"
+smart_punctuation = false          # `...` to `…`, `"quote"` to `“curly”` etc
+
+[language.zh]
+title = "Creatio"
+build_search_index = true
 
 [extra]
 banner = ""
@@ -46,11 +66,6 @@ icons = [
   # {title = 'YouTube', icon = 'youtube', url = 'https://www.youtube.com'}
   # {title = 'Bilibili', icon = 'bilibili', url = 'https://www.bilibili.com'}
 ]
-
-utterances = ""
-utterances_label = "Comments"
-utterances_theme = "github-light"
-utterances_issue_term = "pathname"
 
 # Do not change this variables
 data_themes = [
@@ -97,3 +112,15 @@ data_schemes = [
   'info',
   'info inverted',
 ]
+
+[extra.beaudar]
+enabled = true
+repo = "aquarv/aquarv.github.io"
+branch = "main"
+issue_term = "title"
+label = "💬 评论"
+theme = "github-light"
+# comment-order = "desc"
+# input-position = "top"
+# comment-order="{{config.extra.beaudar.comment-order}}"
+# input-position="{{config.extra.beaudar.input-position}}"
