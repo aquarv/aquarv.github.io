@@ -1,6 +1,6 @@
 ---
 date: 2023-04-06
-title: Rust 语言基础
+title: Rust 语言基础学习
 extra:
   image: course_banner.jpg
 taxonomies:
@@ -32,10 +32,10 @@ taxonomies:
 > `match` 还可以使用 guard 形式（不知道怎么翻译，看守？）进行条件约束的匹配，如下：
 > ```rust
 > match value {
->             x if x < 0 => println!("Negative number"),
->             x if x == 0 => println!("Zero number"),
->             x => println!("Positive number"),
->         }
+>     x if x < 0 => println!("Negative number"),
+>     x if x == 0 => println!("Zero number"),
+>     x => println!("Positive number"),
+> }
 > ```
 
 ## 2023-03-29 集合类型 HashMap

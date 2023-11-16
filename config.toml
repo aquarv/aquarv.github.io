@@ -5,7 +5,7 @@ default_language = "en"
 compile_sass = true
 title = "Creatio"
 description = "My personal blog site."
-generate_feed = false
+generate_feed = true
 # output_dir = "output"
 
 taxonomies = [
@@ -17,17 +17,18 @@ build_search_index = true
 
 [search] # Options specific to elasticlunr search.
 # index format can be: elasticlunr_json or elasticlunr_javascript
-index_format = "elasticlunr_json"
-include_title = true              # include title of page/section in index
-include_description = true        # include description of page/section in index
-include_content = true            # include rendered content of page/section in index
+# index_format = "elasticlunr_json"
+include_title = true       # include title of page/section in index
+include_description = true # include description of page/section in index
+include_content = true     # include rendered content of page/section in index
 # truncate_content_length = 100 # Truncate at nth character. May be useful if index is getting too large.
 
 [markdown]
 line_numbers = true
+linenos = true
 highlight_code = true
-highlight_theme = "css"
-render_emoji = false
+# highlight_theme = "css"
+# render_emoji = false
 external_links_target_blank = true # rel="noopener"
 external_links_no_follow = false   # rel="nofollow"
 external_links_no_referrer = false # rel="noreferrer"
@@ -41,7 +42,7 @@ build_search_index = true
 banner = ""
 date_format = '%Y-%m-%d'
 
-theme = 'quartz'
+theme = 'mine'
 bg = "dark"
 inverted = false
 
@@ -53,23 +54,25 @@ tags = 'Posts by Topics'
 
 links = [
   { title = 'Articles', url = 'articles' },
-  { title = 'Authors', url = 'authors' },
+  # { title = 'Authors', url = 'authors' },
   { title = 'About', url = 'about' },
   { title = 'Topics', url = 'tags' },
-  { title = 'Github', url = 'https://github.com/aquarv' },
+  # { title = 'Github', url = 'https://github.com/aquarv' },
 ]
 email = "yang@creatio.top"
 icons = [
+  { title = 'Github', icon = 'github', url = 'https://github.com/aquarv' },
   # {title = 'Facebook', icon = 'facebook-f', url = 'https://www.facebook.com'},
   # {title = 'Instagram', icon = 'instagram', url = 'https://www.instagram.com'},
   # {title = 'Twitter', icon = 'twitter', url = 'https://twitter.com'},
-  # {title = 'YouTube', icon = 'youtube', url = 'https://www.youtube.com'}
-  # {title = 'Bilibili', icon = 'bilibili', url = 'https://www.bilibili.com'}
+  # {title = 'YouTube', icon = 'youtube', url = 'https://www.youtube.com'},
+  # {title = 'Bilibili', icon = 'bilibili', url = 'https://www.bilibili.com'},
 ]
 
 # Do not change this variables
 data_themes = [
   'default',
+  'mine',
   'cerulean',
   'cosmo',
   'cyborg',
@@ -119,8 +122,6 @@ repo = "aquarv/aquarv.github.io"
 branch = "main"
 issue_term = "title"
 label = "💬 评论"
-theme = "github-light"
+theme = "preferred-color-scheme"
 # comment-order = "desc"
 # input-position = "top"
-# comment-order="{{config.extra.beaudar.comment-order}}"
-# input-position="{{config.extra.beaudar.input-position}}"
