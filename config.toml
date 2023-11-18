@@ -42,7 +42,14 @@ build_search_index = true
 banner = ""
 date_format = '%Y-%m-%d'
 
-theme = 'mine'
+stylesheets = ["mine.css"]
+### Uncomment below line to load fontawesome, eg: <i class="fa-solid fa-heart"></i>
+fontawesome = "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"
+js_copycode = true                                                                               # The copy button on code blocks that allows you to copy them to the clipboard.
+js_email_encode = true                                                                           # obfuscates email address in footer
+js_prestyle = true                                                                               # used to preload: FontAwesome, Katex, external Google Fonts
+
+theme = 'quartz'
 bg = "dark"
 inverted = false
 
@@ -69,10 +76,49 @@ icons = [
   # {title = 'Bilibili', icon = 'bilibili', url = 'https://www.bilibili.com'},
 ]
 
+###############################################################################
+### Favicons, comment out a line to disable loading some or all of these if needed.
+###############################################################################
+
+favicon_theme_color = "#333333"
+favicon_ms_color = "#333333"
+favicon_mask = "safari-pinned-tab.svg" # safari-pinned-tab.svg
+favicon_mask_color = "#ff9900"
+favicon_svg = "favicon.svg"            # favicon.svg
+favicon180 = "apple-touch-icon.png"    # apple-touch-icon.png
+favicon32 = "favicon-32x32.png"        # favicon-32x32.png
+favicon16 = "favicon-16x16.png"        # favicon-16x16.png
+
+###############################################################################
+### Icons
+### Loading the entire fontawesome icon collection will negatively impact your sites performance.
+### For a lightweight solution consider adding only the icons that you need to the following file:
+### https://github.com/Jieiku/abridge/blob/master/sass/include/_icons.scss
+###############################################################################
+
+### To disable any of these icons set them to "false" (will default to unicode icons instead)
+#icon_search = "svgs search" # Search button in search box.
+#icon_adjust = "svgs adjust" # Theme Switcher button in top menu. (add class svgh to change colors on hover)
+#icon_first = "svgs svgh angll" # Pagination First Page.
+#icon_prev = "svgs svgh angl" # Pagination Previous Page.
+#icon_next = "svgs svgh angr" # Pagination Next Page.
+#icon_last = "svgs svgh angrr" # Pagination Last Page.
+icon_top = "fa fa-arrow-up"      # Back to Top Button.
+icon_copy = "fa-regular fa-copy" # Copy Button
+
+#icon_read = "svgs fa-solid fa-glasses" # displayed in metadata on index and below title on page.
+#icon_date = "svgs fa-solid fa-calendar" # displayed in metadata on index and below title on page.
+#icon_info = "svgs fa-solid fa-circle-info" # displayed in metadata on index and below title on page for categories/tags
+#icon_author = "svgs fa-solid fa-pen-fancy" # displayed in metadata on index and below title on page.
+
+#icon_read = "svgs fa-solid fa-glasses" # displayed in metadata on index and below title on page.
+#icon_date = "svgs fa-solid fa-calendar" # displayed in metadata on index and below title on page.
+#icon_info = "svgs fa-solid fa-circle-info" # displayed in metadata on index and below title on page for categories/tags
+#icon_author = "svgs fa-solid fa-pen-fancy" # displayed in metadata on index and below title on page.
+
 # Do not change this variables
 data_themes = [
   'default',
-  'mine',
   'cerulean',
   'cosmo',
   'cyborg',

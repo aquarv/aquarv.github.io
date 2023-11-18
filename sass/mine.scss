@@ -1,0 +1,256 @@
+/* my modification */
+@use "sass:meta";
+@use "sass:list";
+
+@use "functions";
+@use "colors";
+@use "colors-syntax";
+
+// Highlighted text
+// mark {
+// background-color: var(--c4);
+// color: var(--c1);
+// vertical-align: baseline;
+// padding: .1rem .4rem;
+// }
+// blockquote {
+// margin-left: 0;
+// padding: .5rem 0 .5rem 1.5rem;
+// border-left: .25rem solid var(--c3);
+// }
+// blockquote > :last-child {
+// margin-bottom: 0;
+// }
+// small {
+// font-size: .875rem;
+// }
+
+.pre-head {
+    position: block;
+    // height: 24px;
+    // vertical-align: middle;
+}
+
+.copy::before {
+    content: "\1F5D0";
+}
+//copy icons for code blocks
+.copy { mask: functions.icon(copy, "%23000", 2, "none", true) ; background: var(--f2) }
+.copy.yes { mask: functions.icon(copy-yes, "%23000", 2, "none", true) ; background: var(--cg) }
+.copy.err { mask: functions.icon(copy-err, "%23000", 2, "none", true) ; background: var(--cr) }
+
+.copy-btn {
+    right: 0.5rem;
+    position: relative;
+    text-align: right;
+}
+
+pre {
+    position: relative;
+    padding: 2rem .5rem .3rem;
+    border-radius: 5px;
+    display: block;
+    overflow-x: auto;
+    -ms-overflow-style: scrollbar;
+    white-space: pre;
+    > code {
+        display: block;
+        background: transparent;
+    }
+}
+// add header to code blocks
+pre code[data-lang]::before {
+    content: attr(data-lang);
+    padding: .2rem;
+    display: block;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-body-color);
+    width: 100%;
+    border-top-left-radius: 5px 5px;
+    border-top-right-radius: 5px 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+// Table Override, this is used for numbered code blocks linenos and hl_lines
+code {
+    table {
+        font-size: .8rem;
+        margin: 0;
+        // Highlighted text
+        color: var(--h1);
+        mark {
+        display: block;
+        color: unset;
+        padding: 0;
+        background-color: var(--h0);
+        filter: brightness(var(--ha));
+    }
+    }
+    td, th, tr {
+        padding: 0;
+        border-bottom: none;
+    }
+    tbody td:first-child {
+        text-align: center;
+        user-select: none;
+        min-width: 60px;
+    }
+    tbody tr:nth-child(even), thead tr {
+        background-color: unset;
+    }
+}
+// code copy button
+.cc {
+    cursor: pointer;
+    z-index: 9;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.5rem;
+}
+.cc:hover {
+    background: var(--a3);
+    opacity: 1;
+}
+// .svgs {
+//     width: var(--fs);
+//     height: var(--fs);
+//     display: inline-block;
+//     //overflow: hidden;
+//     text-align: center;
+//     vertical-align: middle;
+// }
+
+/* Back to top button */
+.back-to-top {
+    --bs-btt-spacer-y: 1.75rem;
+    --bs-btt-spacer-x: 2rem;
+    --bs-btt-title-spacer-y: 1rem;
+    --bs-btt-title-color: ;
+    --bs-btt-subtitle-color: ;
+    --bs-btt-border-width: var(--bs-border-width);
+    --bs-btt-border-color: rgba(255, 255, 255, 0.2);
+    --bs-btt-border-radius: var(--bs-border-radius);
+    --bs-btt-box-shadow: ;
+    --bs-btt-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-btt-cap-color: #fff;
+    --bs-btt-color: #fff;
+    --bs-btt-bg: transparent;
+    --bs-btt-img-overlay-padding: 2rem;
+    --bs-btt-group-margin: 0.75rem;
+    --bs-btt-color: #000;
+    --bs-btt-bg: rgba(255, 255, 255, 0.4);
+    --bs-btt-border-color: rgba(255, 255, 255, 0.4);
+    --bs-btt-hover-color: #000;
+    --bs-btt-hover-bg: rgba(255, 255, 255, 0.49);
+    --bs-btt-hover-border-color: rgba(255, 255, 255, 0.46);
+    --bs-btt-focus-shadow-rgb: 149, 149, 149;
+    --bs-btt-active-color: #000;
+    --bs-btt-active-bg: rgba(255, 255, 255, 0.52);
+    --bs-btt-active-border-color: rgba(255, 255, 255, 0.46);
+    --bs-btt-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btt-disabled-color: #000;
+    --bs-btt-disabled-bg: rgba(255, 255, 255, 0.4);
+    --bs-btt-disabled-border-color: rgba(255, 255, 255, 0.4);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: var(--bs-btt-bg);
+    background-clip: border-box;
+    border: var(--bs-btt-border-width) solid var(--bs-btt-border-color);
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 0;
+    /* padding: 10 0px; */
+    height: 32px;
+    width: 32px;
+    /* color: $b2t-color; */
+    /* cursor: pointer; */
+    /* transition-property: bottom; */
+
+    &.back-to-top-on {
+        bottom: 10;
+    }
+}
+
+.btt-box {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Article preview split ratio */
+.g-0,
+.gx-0 {
+    --bs-gutter-x: 0
+}
+
+.g-0,
+.gy-0 {
+    --bs-gutter-y: 0
+}
+
+.g-1,
+.gx-1 {
+    --bs-gutter-x: 0.25rem
+}
+
+.g-1,
+.gy-1 {
+    --bs-gutter-y: 0.25rem
+}
+
+.g-2,
+.gx-2 {
+    --bs-gutter-x: 0.5rem
+}
+
+.g-2,
+.gy-2 {
+    --bs-gutter-y: 0.5rem
+}
+
+.g-3,
+.gx-3 {
+    --bs-gutter-x: 1rem
+}
+
+.g-3,
+.gy-3 {
+    --bs-gutter-y: 1rem
+}
+
+.g-4,
+.gx-4 {
+    --bs-gutter-x: 1.5rem
+}
+
+.g-4,
+.gy-4 {
+    --bs-gutter-y: 1.5rem
+}
+
+.g-5,
+.gx-5 {
+    --bs-gutter-x: 3rem
+}
+
+.g-5,
+.gy-5 {
+    --bs-gutter-y: 3rem
+}
+
+/* card gap */
+.card {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
