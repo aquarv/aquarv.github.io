@@ -1,15 +1,19 @@
----
-date: 2023-04-06
-title: Rust 语言基础学习
-extra:
-  image: course_banner.jpg
-taxonomies:
-  authors:
-    - yang
-  tags:
-    - rust
-    - notes
----
++++
+title = "Rust 语言基础学习"
+description = "Rust 语言基础学习记录"
+date = 2023-04-06
+#updated = 2023-07-21
+draft = false
+
+[taxonomies]
+authors = ["yang"]
+tags = ["rust","notes"]
+
+[extra]
+toc = true
+series = "Rust"
+image = "course_banner.jpg"
++++
 
 > NOTE: 有的人可能开了 rustlings 的 lsp 功能，但是仍然没有智能提示/补全功能，这可能是因为 rust-analyzer 插件更新后和当前的 rustlings 不兼容导致的，可以将 rust-analyzer 插件的版本回退，暂时解决此问题：
 > 

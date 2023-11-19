@@ -1,16 +1,19 @@
----
-title: RISC-V 特权架构学习
-date: 2023-04-05
-extra:
-  image: ""
-taxonomies:
-  authors:
-    - yang
-  tags:
-    - risc-v
-    - notes
----
++++
+title = "RISC-V 特权架构学习"
+description = "RISC-V 特权架构学习记录"
+date = 2023-04-05
+#updated = 2023-07-21
+draft = false
 
+[taxonomies]
+authors = ["yang"]
+tags = ["risc-v","notes"]
+
+[extra]
+toc = true
+series = "RISC-V"
+image = ""
++++
 ## 2023-04-05 RISC-V特权指令级架构 特权级别
 
 ### 特权体系结构
