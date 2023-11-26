@@ -10,6 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block head %}
+    <link rel="shortcut icon" href="{{get_url(path=config.extra.favicon_svg)}}" type="image/svg">
     <title>{% block title %}{{config.title}}{% endblock %}</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
@@ -87,7 +88,10 @@
         <a class="navbar-brand"
           href="{{config.base_url}}"
           title="{{config.description}}"
-        >{{config.title}}</a>
+        >
+        <!-- <img src="{{get_url(path=config.extra.favicon_svg)}}" /> -->
+        {{config.title}}
+        </a>
         <button
           class="navbar-toggler"
           type="button"

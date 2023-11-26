@@ -12,7 +12,7 @@ tags = ["risc-v","notes"]
 [extra]
 toc = true
 series = "RISC-V"
-image = ""
+image = "riscv.png"
 +++
 ## 2023-04-05 RISC-V特权指令级架构 特权级别
 

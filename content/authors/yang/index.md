@@ -2,6 +2,6 @@
 title: yang
 template: about.html
 extra:
-  image: profile.png
+  image: raven.svg
 ---
 Be curious about the world.
